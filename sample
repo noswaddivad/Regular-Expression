@@ -9,7 +9,7 @@ public class RegStudID {
 			System.out.println("Please Enter Your Student Number: ");
 			String StudNum = sc.nextLine();
 			
-			Pattern pat = new Pattern compile("^2023-[0-9]{6}");
+			Pattern pat = Pattern.compile("^2023-[0-9]{6}");
 			Matcher mat = pat.matcher(StudNum);
 			
 			if(mat.matches()==true) {
