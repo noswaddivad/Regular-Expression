@@ -1,0 +1,24 @@
+import java.util.Scanner;
+import java.util.regex.*;
+public class RegStudID {
+
+	public static void main(String[] args) {
+		try 
+			{
+			Scanner sc = new Scanner(System.in);
+			System.out.print("Please Enter Mobile Number: ");
+			String MobNum = sc.nextLine();
+			
+			Pattern pat = Pattern.compile("^[+]63-[0-9]{3}-[0-9]{3}-[0-9]{4}");
+			Matcher mat = pat.matcher(MobNum);
+			
+			if(mat.matches()==true) {
+				System.out.println("Mobile Number is Accepted " + MobNum);
+			}else {
+				System.out.println("Invalid Mobile Number");
+			}
+	}catch(Exception e) {
+		System.out.println(e.getMessage());
+	}
+}
+}
